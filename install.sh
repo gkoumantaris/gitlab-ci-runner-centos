@@ -25,8 +25,9 @@ if [[ "$(id -u)" != "0" ]]; then
 	echo "Must be run as root!"
 	exit 1
 fi
-
-source ./install.conf
+##i want to run it as root, you create another user and setup the keys with your gitlab_ci server
+GLCIR_USER="root"
+GLCIR_ROOT="$(pwd)"
 REPO_DIR=$(pwd)
 
 ruby --version 
